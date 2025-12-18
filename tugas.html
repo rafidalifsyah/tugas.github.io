@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Alert dan Dialog Box</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #hasil{
+            margin-top: 40px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Latihan Tugas Alert dan Dialog Box</h1>
+
+    <script>
+        // 1. Alert Box seperti contoh gambar
+        alert("Selamat datang di website interaktif JavaScript!");
+
+        // 2. Confirm Box seperti contoh gambar
+        let konfirmasi = confirm("Apakah Anda ingin mengisi data pengguna?");
+
+        if(konfirmasi){
+            // 3. Prompt dialog box seperti contoh gambar
+            let nama = prompt("Masukkan nama Anda!");
+
+            // 4. Jika pengguna isi nama → tampilkan di halaman
+            if(nama){
+                document.write(`
+                    <h1>Interaksi JavaScript</h1>
+                    <p>Halo, <b>${nama}</b>! Terima kasih telah mengisi data.</p>
+                `);
+            } else {
+                document.write(`
+                    <h1>Interaksi JavaScript</h1>
+                    <p>Anda tidak memasukkan nama.</p>
+                `);
+            }
+
+        } else {
+            // Jika tekan Cancel pada confirm
+            document.write(`
+                <h1>Interaksi JavaScript</h1>
+                <p>Anda memilih untuk tidak mengisi data pengguna.</p>
+            `);
+        }
+    </script>
+
+</body>
+</html>
